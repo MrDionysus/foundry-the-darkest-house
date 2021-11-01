@@ -9,5 +9,6 @@
     // Actor partials.
     "systems/thedarkesthouse/templates/actor/parts/actor-features.html",
     "systems/thedarkesthouse/templates/actor/parts/actor-items.html",
+    "systems/thedarkesthouse/templates/actor/parts/actor-modifiedratings.html",
   ]);
 };

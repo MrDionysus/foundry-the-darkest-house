@@ -13,7 +13,7 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
       template: "systems/thedarkesthouse/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "modifiedratings" }]
     });
   }
 
@@ -71,7 +71,7 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
   _prepareItems(context) {
     // Initialize containers.
     const gear = [];
-    const features = [];
+    const modifiedratings = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -80,15 +80,15 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
       if (i.type === 'item') {
         gear.push(i);
       }
-      // Append to features.
+      // Append to modifiedratings.
       else if (i.type === 'feature') {
-        features.push(i);
+        modifiedratings.push(i);
       }
     }
 
     // Assign and return
     context.gear = gear;
-    context.features = features;
+    context.modifiedratings = modifiedratings;
    }
 
   /* -------------------------------------------- */
