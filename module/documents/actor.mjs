@@ -36,7 +36,6 @@ export class TheDarkestHouseActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
-    this._prepareNpcData(actorData);
   }
 
   /**
@@ -47,17 +46,6 @@ export class TheDarkestHouseActor extends Actor {
 
     // Make modifications to data here. For example:
     const data = actorData.data;
-  }
-
-  /**
-   * Prepare NPC type specific data.
-   */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
-
-    // Make modifications to data here. For example:
-    const data = actorData.data;
-    data.xp = (data.cr * data.cr) * 100;
   }
 
   /**
@@ -83,15 +71,6 @@ export class TheDarkestHouseActor extends Actor {
     if (data.attributes.level) {
       data.lvl = data.attributes.level.value ?? 0;
     }
-  }
-
-  /**
-   * Prepare NPC roll data.
-   */
-  _getNpcRollData(data) {
-    if (this.data.type !== 'npc') return;
-
-    // Process additional NPC data here.
   }
 
 }
