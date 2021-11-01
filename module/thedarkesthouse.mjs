@@ -28,10 +28,11 @@ Hooks.once('init', async function() {
    * Set an initiative formula for the system
    * @type {String}
    */
-  CONFIG.Combat.initiative = {
-    formula: "1d20",
-    decimals: 2
-  };
+  // Removing Initiative for TDH system
+  //CONFIG.Combat.initiative = {
+  //  formula: "1d20",
+  //  decimals: 2
+  //};
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = TheDarkestHouseActor;
