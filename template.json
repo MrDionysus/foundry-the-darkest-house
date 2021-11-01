@@ -21,7 +21,8 @@
       "attributes": {
         "wounds": {
           "value": 0
-        }
+        },
+        "modifiedratings": ""
       }
     }
   },
