@@ -66,10 +66,20 @@ export class TheDarkestHouseActor extends Actor {
   _getCharacterRollData(data) {
     if (this.data.type !== 'character') return;
 
-    // Add level for easier access, or fall back to 0.
+    // Add overallrating for easier access, or fall back to 0.
     if (data.attributes.overallrating) {
       data.overallrating = data.attributes.overallrating.value ?? 0;
     }
+    // Add doom for easier access, or fall back to 0.
+    if (data.attributes.doom) {
+      data.doom = data.attributes.doom.value ?? 0;
+    }
+    // Add wounds for easier access, or fall back to 0.
+    if (data.attributes.wounds) {
+      data.wounds = data.attributes.wounds.value ?? 0;
+    }
+
+  
   }
   
 }
