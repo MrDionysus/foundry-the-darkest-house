@@ -81,7 +81,7 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
         gear.push(i);
       }
       // Append to modifiedratings.
-      else if (i.type === 'feature') {
+      else if (i.type === 'modifiedratings') {
         modifiedratings.push(i);
       }
     }

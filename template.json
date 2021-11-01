@@ -27,7 +27,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature"],
+    "types": ["item", "feature", "modifiedratings", "specialabilities", "generaltraits", "boonsbanesineffect"],
     "templates": {
       "base": {
         "description": ""
@@ -40,6 +40,18 @@
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },
     "feature": {
+      "templates": ["base"]
+    },
+    "modifiedratings": {
+      "templates": ["base"]
+    },
+    "specialabilities": {
+      "templates": ["base"]
+    },
+    "generaltraits": {
+      "templates": ["base"]
+    },
+    "boonsbanesineffect": {
       "templates": ["base"]
     }
   }
