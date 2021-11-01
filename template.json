@@ -27,7 +27,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "modifiedratings", "specialabilities", "generaltraits", "boonsbanesineffect"],
+    "types": ["item", "feature", "modifiedrating", "specialability", "generaltrait", "boonsbanesineffect"],
     "templates": {
       "base": {
         "description": ""
