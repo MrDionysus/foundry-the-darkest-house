@@ -42,13 +42,13 @@
     "feature": {
       "templates": ["base"]
     },
-    "modifiedratings": {
+    "modifiedrating": {
       "templates": ["base"]
     },
-    "specialabilities": {
+    "specialability": {
       "templates": ["base"]
     },
-    "generaltraits": {
+    "generaltrait": {
       "templates": ["base"]
     },
     "boonsbanesineffect": {

@@ -71,6 +71,7 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
   _prepareItems(context) {
     // Initialize containers.
     const gear = [];
+    const features = [];
     const modifiedratings = [];
 
     // Iterate through items, allocating to containers
@@ -80,14 +81,19 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
       if (i.type === 'item') {
         gear.push(i);
       }
+      // Append to features.
+      else if (i.type === 'feature') {
+        features.push(i);
+      }
       // Append to modifiedratings.
-      else if (i.type === 'modifiedratings') {
+      else if (i.type === 'modifiedrating') {
         modifiedratings.push(i);
       }
     }
 
     // Assign and return
     context.gear = gear;
+    context.features = features;
     context.modifiedratings = modifiedratings;
    }
 
