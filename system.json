@@ -2,7 +2,7 @@
   "name": "thedarkesthouse",
   "title": "The Darkest House",
   "description": "The The Darkest House system for FoundryVTT!",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "0.8.9",
   "author": "MrDionysus",
