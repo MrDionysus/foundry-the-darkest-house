@@ -22,17 +22,22 @@
         "wounds": {
           "value": 0
         },
-        "modifiedratings": ""
+        "modifiedratings": "",
+        "specialabilities": "",
+        "generaltraits": "",
+        "boonsbanesineffect": "",
+        "equipment": ""
       }
     }
   },
   "Item": {
-    "types": ["item", "feature", "modifiedrating", "specialability", "generaltrait", "boonsbanesineffect"],
+    "types": ["item", "feature", "modifiedrating", "specialability", "generaltrait", "boonorbane", "equipmentitem"],
     "templates": {
       "base": {
         "description": ""
       }
     },
+ 
     "item": {
       "templates": ["base"],
       "quantity": 1,
@@ -51,7 +56,10 @@
     "generaltrait": {
       "templates": ["base"]
     },
-    "boonsbanesineffect": {
+    "boonorbane": {
+      "templates": ["base"]
+    },
+    "equipmentitem": {
       "templates": ["base"]
     }
   }

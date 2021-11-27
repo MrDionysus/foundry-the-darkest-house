@@ -11,7 +11,7 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["thedarkesthouse", "sheet", "actor"],
       template: "systems/thedarkesthouse/templates/actor/actor-sheet.html",
-      width: 600,
+      width: 750,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "modifiedratings" }]
     });
@@ -73,6 +73,10 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
     const gear = [];
     const features = [];
     const modifiedratings = [];
+    const specialabilities = [];
+    const generaltraits = [];
+    const boonsbanesineffect = [];
+    const equipment = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -89,12 +93,32 @@ export class TheDarkestHouseActorSheet extends ActorSheet {
       else if (i.type === 'modifiedrating') {
         modifiedratings.push(i);
       }
+      // Append to specialabilities.
+      else if (i.type === 'specialability') {
+        specialabilities.push(i);
+      }
+      // Append to generaltraits.
+      else if (i.type === 'generaltrait') {
+        generaltraits.push(i);
+      }
+      // Append to boonsbanesineffect.
+      else if (i.type === 'boonorbane') {
+        boonsbanesineffect.push(i);
+      }
+      // Append to equipment.
+      else if (i.type === 'equipmentitem') {
+        equipment.push(i);
+      }
     }
 
     // Assign and return
     context.gear = gear;
     context.features = features;
     context.modifiedratings = modifiedratings;
+    context.specialabilities = specialabilities;
+    context.generaltraits = generaltraits;
+    context.boonsbanesineffect = boonsbanesineffect;
+    context.equipment = equipment;
    }
 
   /* -------------------------------------------- */
