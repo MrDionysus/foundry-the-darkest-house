@@ -1,5 +1,5 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
+  
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
@@ -55,24 +55,10 @@
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
-
     {{!-- Modified Ratings Tab --}}
-    <div class="tab modifiedratings" data-group="primary" data-tab="modifiedratings">
-      <section class="grid grid-2col">
-        <aside class="sidebar">
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-        </aside>
-
-        {{!-- For the main modifiedratings list, span the right two columns --}}
-        <section class="main grid-span-2">
-          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-          {{> "systems/thedarkesthouse/templates/actor/parts/actor-modifiedratings.html"}}
-        </section>
-
-      </section>
-    </div>
+    <div class="tab items" data-group="primary" data-tab="modifiedratings">
+      {{> "systems/thedarkesthouse/templates/actor/parts/actor-modifiedratings.html"}}
+   </div>
 
     {{!-- Special Abilities Tab --}}
     <div class="tab items" data-group="primary" data-tab="specialabilities">
